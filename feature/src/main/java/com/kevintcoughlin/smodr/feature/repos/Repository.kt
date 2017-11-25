@@ -1,6 +1,8 @@
 package com.kevintcoughlin.smodr.feature.repos
 
-abstract class Repository<out T> {
-    abstract fun fetchById(id: String) : T
-    abstract fun fetch(start: Int?, end: Int?): List<T>
+import android.arch.lifecycle.LiveData
+
+abstract class Repository<T> {
+    abstract fun get(id: String) : LiveData<T>
+    abstract fun fetch(start: Int?, end: Int?): LiveData<List<T>>
 }
