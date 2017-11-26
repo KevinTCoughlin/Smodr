@@ -17,21 +17,17 @@ class EpisodeRepo: Repository<Item> {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun get(id: String): LiveData<Item> {
-        val data = MutableLiveData<Item>()
-        data.value = Item("hey")
-        return data
+    override fun get(id: String): Item {
+        return Item("hey")
     }
 
-    override fun fetch(): LiveData<List<Item>> {
-        val data: MutableLiveData<List<Item>> = MutableLiveData()
+    override fun fetch(): List<Item> {
         val list = ArrayList<Item>()
         list.add(Item("Hey"))
         list.add(Item("Hey1"))
         list.add(Item("Hey2"))
         list.add(Item("Hey3"))
         list.add(Item("Hey4"))
-        data.value = list
-        return data
+        return list
     }
 }

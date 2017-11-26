@@ -13,7 +13,4 @@ class FeedViewModel: ViewModel() {
 
     @Inject
     lateinit var feedRepo: FeedRepo
-
-    fun init(id: String) {
-        feed = feedRepo.get(id)
-    } }
+}
