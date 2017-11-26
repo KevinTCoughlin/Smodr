@@ -15,17 +15,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val retrofit = Retrofit.Builder().build()
-        val rssService = retrofit.create(RssService::class.java)
-        val resp = rssService.fetchFeed("http://feeds.feedburner.com/SModcasts")
-
-        val list = findViewById<RecyclerView>(R.id.list)
-        val linearLayoutManager = LinearLayoutManager(this)
-        val adapter = FeedAdapter()
-
-        linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
-        list.adapter = adapter
-        list.setHasFixedSize(true)
-        list.layoutManager = linearLayoutManager
+//        val retrofit = Retrofit.Builder().build()
+//        val rssService = retrofit.create(RssService::class.java)
+//        val resp = rssService.fetchFeed("http://feeds.feedburner.com/SModcasts")
+//
+//        val list = findViewById<RecyclerView>(R.id.list)
+//        val linearLayoutManager = LinearLayoutManager(this)
+//        val adapter = FeedAdapter()
+//
+//        linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
+//        list.adapter = adapter
+//        list.setHasFixedSize(true)
+//        list.layoutManager = linearLayoutManager
     }
 }
