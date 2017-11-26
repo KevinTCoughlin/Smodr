@@ -6,14 +6,26 @@ import com.kevintcoughlin.smodr.feature.models.Feed
 import javax.inject.Singleton
 
 @Singleton
-class FeedRepo: Repository<Feed>() {
+class FeedRepo: Repository<Feed> {
+    override fun size(): Int {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun clear() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun remove(id: String) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
     override fun get(id: String): LiveData<Feed> {
         val data: MutableLiveData<Feed> = MutableLiveData()
         data.value = Feed("Hey")
         return data
     }
 
-    override fun fetch(start: Int?, end: Int?): LiveData<List<Feed>> {
+    override fun fetch(): LiveData<List<Feed>> {
         val data: MutableLiveData<List<Feed>> = MutableLiveData()
         val list = ArrayList<Feed>()
         list.add(Feed("Hey"))
