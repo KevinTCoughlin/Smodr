@@ -1,20 +1,18 @@
 package com.kevintcoughlin.smodr.feature.repos
 
-import android.arch.lifecycle.LiveData
-import android.arch.lifecycle.MutableLiveData
 import com.kevintcoughlin.smodr.feature.models.Item
 
-class EpisodeRepo: Repository<Item> {
+sealed class EpisodeRepo: Repository<Item> {
     override fun clear() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        throw NotImplementedError();
     }
 
     override fun remove(id: String) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        throw NotImplementedError();
     }
 
     override fun size(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        throw NotImplementedError();
     }
 
     override fun get(id: String): Item {

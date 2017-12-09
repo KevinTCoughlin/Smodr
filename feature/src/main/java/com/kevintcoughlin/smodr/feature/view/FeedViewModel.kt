@@ -7,7 +7,7 @@ import com.kevintcoughlin.smodr.feature.repos.FeedRepo
 import javax.inject.Inject
 
 
-class FeedViewModel: ViewModel() {
+sealed class FeedViewModel: ViewModel() {
     @Inject
     lateinit var channel: LiveData<Rss>
 

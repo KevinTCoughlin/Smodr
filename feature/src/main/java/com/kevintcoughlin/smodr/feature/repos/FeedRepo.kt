@@ -5,17 +5,17 @@ import com.kevintcoughlin.smodr.feature.models.Rss
 import javax.inject.Singleton
 
 @Singleton
-class FeedRepo: Repository<Rss> {
+sealed class FeedRepo: Repository<Rss> {
     override fun size(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        throw NotImplementedError();
     }
 
     override fun clear() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        throw NotImplementedError();
     }
 
     override fun remove(id: String) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        throw NotImplementedError();
     }
 
     override fun get(id: String): Rss {
@@ -23,12 +23,6 @@ class FeedRepo: Repository<Rss> {
     }
 
     override fun fetch(): List<Rss> {
-        val list = ArrayList<Rss>()
-//        list.add(Rss("Hey"))
-//        list.add(Rss("Hey1"))
-//        list.add(Rss("Hey2"))
-//        list.add(Rss("Hey3"))
-//        list.add(Rss("Hey4"))
-        return list
+        return ArrayList()
     }
 }
