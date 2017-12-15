@@ -7,7 +7,7 @@ import com.kevintcoughlin.smodr.feature.network.RssService
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
-class MainActivity : AppCompatActivity() {
+sealed class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,15 +23,6 @@ class MainActivity : AppCompatActivity() {
                 }, {
                     error -> System.out.println(error.message)
                 })
-
-//        val list = findViewById<RecyclerView>(R.id.list)
-//        val linearLayoutManager = LinearLayoutManager(this)
-//        val adapter = FeedAdapter()
-//
-//        linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
-//        list.adapter = adapter
-//        list.setHasFixedSize(true)
-//        list.layoutManager = linearLayoutManager
     }
 }
 

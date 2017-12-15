@@ -1,4 +1,4 @@
-package com.kevintcoughlin.smodr.feature.models
+package com.kevintcoughlin.common.rss
 
 /**
  * Created by excel on 11/18/2017.

@@ -1,21 +1,21 @@
 package com.kevintcoughlin.smodr.feature.repos
 
-import com.kevintcoughlin.smodr.feature.models.Channel
-import com.kevintcoughlin.smodr.feature.models.Rss
+import com.kevintcoughlin.common.rss.Channel
+import com.kevintcoughlin.common.rss.Rss
 import javax.inject.Singleton
 
 @Singleton
 sealed class FeedRepo: Repository<Rss> {
     override fun size(): Int {
-        throw NotImplementedError();
+        throw NotImplementedError()
     }
 
     override fun clear() {
-        throw NotImplementedError();
+        throw NotImplementedError()
     }
 
     override fun remove(id: String) {
-        throw NotImplementedError();
+        throw NotImplementedError()
     }
 
     override fun get(id: String): Rss {

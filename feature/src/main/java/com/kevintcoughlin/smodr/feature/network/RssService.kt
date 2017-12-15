@@ -1,6 +1,6 @@
 package com.kevintcoughlin.smodr.feature.network
 
-import com.kevintcoughlin.smodr.feature.models.Rss
+import com.kevintcoughlin.common.rss.Rss
 import io.reactivex.Observable
 import org.simpleframework.xml.convert.AnnotationStrategy
 import org.simpleframework.xml.core.Persister

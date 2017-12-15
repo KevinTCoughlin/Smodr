@@ -1,18 +1,18 @@
 package com.kevintcoughlin.smodr.feature.repos
 
-import com.kevintcoughlin.smodr.feature.models.Item
+import com.kevintcoughlin.common.rss.Item
 
 sealed class EpisodeRepo: Repository<Item> {
     override fun clear() {
-        throw NotImplementedError();
+        throw NotImplementedError()
     }
 
     override fun remove(id: String) {
-        throw NotImplementedError();
+        throw NotImplementedError()
     }
 
     override fun size(): Int {
-        throw NotImplementedError();
+        throw NotImplementedError()
     }
 
     override fun get(id: String): Item {

@@ -1,5 +1,6 @@
-package com.kevintcoughlin.smodr.feature.models
+package com.kevintcoughlin.common.rss
 
+import com.kevintcoughlin.common.rss.Channel
 import org.simpleframework.xml.Element
 import org.simpleframework.xml.Root
 

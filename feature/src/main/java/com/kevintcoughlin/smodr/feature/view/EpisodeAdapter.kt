@@ -9,10 +9,10 @@ class EpisodeAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): RecyclerView.ViewHolder {
-        throw NotImplementedError();
+        throw NotImplementedError()
     }
 
     override fun getItemCount(): Int {
-        throw NotImplementedError();
+        throw NotImplementedError()
     }
 }
