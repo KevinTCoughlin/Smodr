@@ -32,7 +32,8 @@ android {
 dependencies {
     implementation project(':feature')
     implementation project(':base')
-    implementation 'com.google.firebase:firebase-crash:11.6.0'
+    implementation 'com.google.firebase:firebase-crash:11.8.0'
+    implementation 'com.google.firebase:firebase-core:11.8.0'
 }
 
 apply plugin: 'com.google.gms.google-services'
