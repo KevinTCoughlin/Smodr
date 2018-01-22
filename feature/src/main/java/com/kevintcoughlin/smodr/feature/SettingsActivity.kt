@@ -9,6 +9,11 @@ import com.kevintcoughlin.smodr.feature.R
 class SettingsActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
+
         setContentView(R.layout.activity_settings)
+        fragmentManager.beginTransaction()
+                .replace(android.R.id.content, SettingsFragment())
+                .commit()
+        setTitle(R.string.menu_settings_title)
     }
 }

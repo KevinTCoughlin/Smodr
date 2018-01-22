@@ -8,8 +8,8 @@ class SettingsFragment : PreferenceFragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        addPreferencesFromResource(R.xml.preferences)
 
+        addPreferencesFromResource(R.xml.preferences)
         PreferenceManager.setDefaultValues(activity, R.xml.preferences, false)
     }
 }
