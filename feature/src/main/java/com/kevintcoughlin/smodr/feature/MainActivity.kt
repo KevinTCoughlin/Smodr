@@ -1,7 +1,10 @@
 package com.kevintcoughlin.smodr.feature
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.Menu
+import android.view.MenuItem
 import com.kevintcoughlin.smodr.feature.network.FeedEndpoints
 import com.kevintcoughlin.smodr.feature.network.RssService
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -23,6 +26,27 @@ class MainActivity : AppCompatActivity() {
                 }, {
                     error -> System.out.println(error.message)
                 })
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        if (item != null) {
+            when (item.itemId) {
+                R.id.menu_settings -> launchSettings()
+                else -> return super.onOptionsItemSelected(item)
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun launchSettings() {
+        val intent = Intent(this, SettingsActivity::class.java)
+        startActivity(intent)
     }
 }
 

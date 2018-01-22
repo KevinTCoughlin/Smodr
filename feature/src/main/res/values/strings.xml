@@ -1,1 +1,6 @@
-<resources></resources>
+<resources>
+    <string name="setting_telemetry_id">SETTING_TELEMETRY_ENABLED</string>
+    <string name="setting_telemetry_title">Opt-in to anonymous usage telemetry</string>
+    <string name="setting_telemetry_summary">Usage telemetry helps us improve the app</string>
+    <string name="menu_settings_title">Settings</string>
+</resources>
