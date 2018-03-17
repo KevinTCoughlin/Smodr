@@ -1,28 +1,53 @@
 package com.kevintcoughlin.smodr.feature.repos
 
-import com.kevintcoughlin.common.rss.Channel
 import com.kevintcoughlin.common.rss.Rss
-import javax.inject.Singleton
 
-@Singleton
-sealed class FeedRepo: Repository<Rss> {
+class FeedRepo: Repository<Rss> {
+    private val feeds: HashMap<String, Rss>
+
+    constructor() {
+        feeds = HashMap(0)
+    }
+    constructor(rss: Rss) {
+        feeds = HashMap(1)
+        feeds[rss.channel.title] = rss
+    }
+
+    constructor(rss: Array<Rss>) {
+        feeds = HashMap(rss.size)
+
+        for (r in rss) {
+            feeds[r.channel.title] = r
+        }
+    }
+
     override fun size(): Int {
-        throw NotImplementedError()
+        return feeds.size
     }
 
     override fun clear() {
-        throw NotImplementedError()
+        feeds.clear()
     }
 
     override fun remove(id: String) {
-        throw NotImplementedError()
+        feeds.remove(id)
     }
 
     override fun get(id: String): Rss {
-        return Rss(Channel(""))
+        return feeds[id] ?: throw Exception("Feed not found.")
+    }
+
+    override fun put(obj: Rss) {
+        feeds[obj.channel.title] = obj
+    }
+
+    override fun putAll(obj: Array<out Rss>) {
+        for (r in obj) {
+            put(r)
+        }
     }
 
     override fun fetch(): List<Rss> {
-        return ArrayList()
+        return feeds.values.toList()
     }
 }

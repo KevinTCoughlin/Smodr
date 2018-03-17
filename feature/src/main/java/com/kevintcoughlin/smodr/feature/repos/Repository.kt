@@ -1,7 +1,9 @@
 package com.kevintcoughlin.smodr.feature.repos
 
-interface Repository<out T> {
-    fun get(id: String) : T
+interface Repository<in T> {
+    fun get(id: String): Any //@TODO: Fix type
+    fun put(obj: T)
+    fun putAll(obj: Array<out T>)
     fun fetch(): List<T>
     fun size(): Int
     fun clear()
