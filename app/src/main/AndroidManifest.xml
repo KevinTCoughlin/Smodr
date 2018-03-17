@@ -1,2 +1,1 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.kevintcoughlin.smodr.app" />
+<manifest package="com.kevintcoughlin.smodr.app" />
