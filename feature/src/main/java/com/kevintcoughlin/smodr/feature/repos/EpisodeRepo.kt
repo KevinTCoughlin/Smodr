@@ -1,20 +1,9 @@
 package com.kevintcoughlin.smodr.feature.repos
 
+import com.kevintcoughlin.HashMapRepository
 import com.kevintcoughlin.common.rss.Item
 
-sealed class EpisodeRepo: Repository<Item> {
-    override fun clear() {
-        throw NotImplementedError()
-    }
-
-    override fun remove(id: String) {
-        throw NotImplementedError()
-    }
-
-    override fun size(): Int {
-        throw NotImplementedError()
-    }
-
+class EpisodeRepo: HashMapRepository<Item>() {
     override fun get(id: String): Item {
         return Item("hey")
     }
